@@ -8,13 +8,15 @@ import GithubProvider from "./providers/github-provider"
 function App() {
   return (
     <main>
-      <GithubProvider />
-      <ResetCSS />
-      <Layout>
-        <Profile />
+      <GithubProvider>
+        <ResetCSS />
+        <Layout>
+          <Profile />
 
-        <Repositories />
-      </Layout>
+          <Repositories />
+        </Layout>
+      </ GithubProvider>
+
 
     </main>)
 
