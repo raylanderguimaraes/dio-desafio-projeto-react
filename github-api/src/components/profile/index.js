@@ -9,27 +9,42 @@ function Profile() {
     return <S.Wrapper>
        
 
-        <S.WrapperImage src="https://avatars.githubusercontent.com/u/92590610?v=4" alt="Avatar of user" />
+        <S.WrapperImage src={githubState.user.avatar} alt="Avatar of user" />
         <S.WrapperInfoUser>
             <div>
                 <h1>{githubState.user.name}</h1>
                 <S.WrapperUserName>
-                    <h3>Username:</h3> <a href="https://github.com/raylanderguimaraes" target="_blank" rel="noreferrer">raylanderguimaraes</a>
+                    <h3>Username:</h3> <a href={githubState.user.html_url} target="_blank" rel="noreferrer">{githubState.user.login}</a>
+                </S.WrapperUserName>
+                <S.WrapperUserName>
+                    <h3>Company:</h3> <span>{githubState.user.company}</span>
+                </S.WrapperUserName>
+                <S.WrapperUserName>
+                    <h3>Location:</h3> <span>{githubState.user.location}</span>
+                </S.WrapperUserName>
+                <S.WrapperUserName>
+                    <h3>Blog:</h3> <a href={githubState.user.blog}>{githubState.user.blog}</a>
                 </S.WrapperUserName>
             </div>
             <S.WrapperStatusCount>
 
                 <div>
-                    <h4>{githubState.followers}</h4>
-                    <span>5</span>
-                </div>
-                <div>
-                    <h4>Starreds</h4>
-                    <span>5</span>
+                    <h4>Followers</h4>
+                    <span>{githubState.user.followers}</span>
                 </div>
                 <div>
                     <h4>Followings</h4>
-                    <span>5</span>
+                    <span>{githubState.user.followings}</span>
+                </div>
+              
+                <div>
+                    <h4>Gists</h4>
+                    <span>{githubState.user.public_gists}</span>
+                </div>
+
+                <div>
+                    <h4>Repos</h4>
+                    <span>{githubState.user.public_repos}</span>
                 </div>
 
             </S.WrapperStatusCount>
