@@ -4,7 +4,8 @@ import * as S from "./styled";
 function NoSearch(){
   return (
     <S.Wrapper>
-      <h1>Nenhum usuario pesquisado</h1>
+      <h1>Nenum usuário pesquisado</h1>
+      <he>Use o campo de pesquisa para encontar o usuário</he>
     </S.Wrapper>
   );
 };

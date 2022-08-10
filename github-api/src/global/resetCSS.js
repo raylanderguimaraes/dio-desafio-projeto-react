@@ -42,6 +42,8 @@ html {
 body {
   margin: 0;
   font-family: roboto, san-serif;
+  background-color: #000;
+  color: #fff;
 }
 
 /**
